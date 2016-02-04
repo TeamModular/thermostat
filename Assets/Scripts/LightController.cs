@@ -1,15 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class LightController : MonoBehaviour {
-
-	UnityEngine.Component lightSource;
-	Light light;
+public class LightController : MonoBehaviour 
+{
+	Light source;
 	// Use this for initialization
 	void Start () 
 	{
-		lightSource = GetComponent ("lightbulb");
-		light = this.lightSource.GetComponent<Light> ();
+		source  = GetComponent<Light>();
 	}
 
 	public void OnMouseClick()
@@ -19,12 +17,12 @@ public class LightController : MonoBehaviour {
 
 	private void Toggle() 
 	{
-		
-		light.enabled = !light.enabled;
+		source.enabled = !source.enabled;
 	}
 
 	// Update is called once per frame
-	void Update () {
-	
+	void Update () 
+	{
+		
 	}
 }
