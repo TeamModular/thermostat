@@ -10,7 +10,7 @@ public class LightController : MonoBehaviour
 		source  = GetComponent<Light>();
 	}
 
-	public void OnMouseClick()
+	public void OnMouseDown()
 	{
 		Toggle ();
 	}
