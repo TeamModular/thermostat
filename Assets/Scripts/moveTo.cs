@@ -4,11 +4,25 @@ using System.Collections;
 
 public class moveTo : MonoBehaviour 
 {
-	public Transform goal;
+	public Vector2 minimumLimits;
+	public Vector2 maximumLimits;
 
-	void Start () 
+	NavMeshAgent agent;
+
+	void Start()
 	{
-		NavMeshAgent agent = GetComponent<NavMeshAgent>();
-		agent.destination = goal.position; 
+		agent = GetComponent<NavMeshAgent> ();
 	}
+
+	void Update () 
+	{
+		if (agent.velocity == Vector3.zero) 
+		{
+			Vector3 location = new Vector3 (Random.Range (minimumLimits.x, maximumLimits.x), 0, Random.Range (minimumLimits.y, maximumLimits.y));
+			agent.destination = location; 
+		}
+	}
+
+
+
 }
