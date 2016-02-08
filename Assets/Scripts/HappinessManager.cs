@@ -9,8 +9,8 @@ public class HappinessManager : MonoBehaviour
 
 	public double happinessValue;
 	public double happyDistance;
-	public Text happinessText;
 	public List<Light> lights;
+	public Slider happinessSlider;
 
 	// Use this for initialization
 	void Awake () 
@@ -45,7 +45,7 @@ public class HappinessManager : MonoBehaviour
 	void Update () 
 	{
 		handleHappiness ();
-		happinessText.text = "Happiness: " + (int)happinessValue;	
+		happinessSlider.value = (float)happinessValue / 100;
 	
 	}
 }

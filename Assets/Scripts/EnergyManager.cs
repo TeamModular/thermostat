@@ -8,7 +8,7 @@ public class EnergyManager : MonoBehaviour
 
 	public List<Light> lights;
 	public double energy;
-	public Text energyText;
+	public Slider energySlider;
 
 	void Awake()
 	{
@@ -34,8 +34,7 @@ public class EnergyManager : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		energyText.text = "Energy: "+(int)energy;
-
+		energySlider.value = (float)energy / 100;
 		handleLights ();
 
 	}
