@@ -1,11 +1,11 @@
 ﻿// MoveTo.cs
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class moveTo : MonoBehaviour 
 {
-	public Vector2 minimumLimits;
-	public Vector2 maximumLimits;
+	public List<GameObject> rooms;
 
 	bool waiting;
 
@@ -21,7 +21,18 @@ public class moveTo : MonoBehaviour
 	{
 		yield return new WaitForSeconds (2);
 
-		Vector3 location = new Vector3 (Random.Range (minimumLimits.x, maximumLimits.x), 0, Random.Range (minimumLimits.y, maximumLimits.y));
+		int randomRoom = Random.Range (0, rooms.Count - 1);
+
+		BoxCollider collider = rooms[randomRoom].GetComponent<BoxCollider> ();
+		float maxX = collider.bounds.max.x;
+		float maxY = collider.bounds.max.z;
+		float minX = collider.bounds.min.x;
+		float minY = collider.bounds.min.z;
+
+		print (minX);
+		print (minY);
+
+		Vector3 location = new Vector3 (Random.Range (minX, maxX), 0, Random.Range (minY, maxY));
 		agent.destination = location; 
 		waiting = false;
 	}
