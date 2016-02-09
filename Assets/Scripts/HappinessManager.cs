@@ -9,7 +9,7 @@ public class HappinessManager : MonoBehaviour
 
 	public double happinessValue;
 	public double happyDistance;
-	public List<Light> lights;
+	public List<GameObject> rooms;
 	public Slider happinessSlider;
 
 	// Use this for initialization
@@ -28,11 +28,13 @@ public class HappinessManager : MonoBehaviour
 
 	bool lightInRange()
 	{
-		foreach (Light light in lights) 
+		foreach (GameObject room in rooms) 
 		{
+			Light light = room.GetComponentInChildren<Light> ();
+			BoxCollider collider = room.GetComponent<BoxCollider> ();
 			if (light.enabled) 
 			{
-				if (Vector3.Distance (transform.position, light.transform.position) < happyDistance ) 
+				if (collider.bounds.Contains(transform.position))
 				{
 					return true;
 				}

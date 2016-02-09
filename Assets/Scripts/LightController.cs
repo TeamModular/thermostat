@@ -7,7 +7,7 @@ public class LightController : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		source  = GetComponent<Light>();
+		source  = GetComponentInChildren<Light>();
 	}
 
 	public void OnMouseDown()
