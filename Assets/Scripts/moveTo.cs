@@ -29,9 +29,6 @@ public class moveTo : MonoBehaviour
 		float minX = collider.bounds.min.x;
 		float minY = collider.bounds.min.z;
 
-		print (minX);
-		print (minY);
-
 		Vector3 location = new Vector3 (Random.Range (minX, maxX), 0, Random.Range (minY, maxY));
 		agent.destination = location; 
 		waiting = false;
