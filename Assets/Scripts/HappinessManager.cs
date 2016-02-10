@@ -11,6 +11,7 @@ public class HappinessManager : MonoBehaviour
 	public double happyDistance;
 	public List<GameObject> rooms;
 	public Slider happinessSlider;
+    public double happinessStep = 5;
 
 	// Use this for initialization
 	void Awake () 
@@ -23,7 +24,7 @@ public class HappinessManager : MonoBehaviour
 	void handleHappiness()
 	{
 		if (happinessValue>0 && !lightInRange())
-			happinessValue -= 1 * Time.deltaTime;
+			happinessValue -= happinessStep * Time.deltaTime;
 	}
 
 	bool lightInRange()
