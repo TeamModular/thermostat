@@ -8,7 +8,6 @@ public class HappinessManager : MonoBehaviour
 {
 
 	public double happinessValue;
-	public double happyDistance;
 	public List<GameObject> rooms;
 	public Slider happinessSlider;
 

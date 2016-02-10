@@ -10,10 +10,12 @@ public class moveTo : MonoBehaviour
 	bool waiting;
 
 	NavMeshAgent agent;
+	Animation animator;
 
 	void Start()
 	{
-		waiting = false;
+		animator = GetComponent<Animation> ();
+		waiting = true;
 		agent = GetComponent<NavMeshAgent> ();
 	}
 
@@ -31,16 +33,23 @@ public class moveTo : MonoBehaviour
 
 		Vector3 location = new Vector3 (Random.Range (minX, maxX), 0, Random.Range (minY, maxY));
 		agent.destination = location; 
-		waiting = false;
+		waiting = true;
 	}
 
 	void Update () 
 	{
-		if (agent.velocity == Vector3.zero && !waiting) 
+		if (agent.velocity == Vector3.zero && waiting) 
 		{
 			StartCoroutine (SetNewDestinationAfterWaiting (1));
-			waiting = true;
-		} 
+			waiting = false;
+		}
+		if (agent.velocity == Vector3.zero) 
+		{
+			animator.Play ("idle",PlayMode.StopAll);
+		} else 
+		{
+			animator.Play ("walk",PlayMode.StopAll);
+		}
 	}
 
 
