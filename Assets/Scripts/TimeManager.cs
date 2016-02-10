@@ -10,6 +10,8 @@ public class TimeManager : MonoBehaviour
 
     private float currentTime;
 
+    public int Hours;
+    public int Minutes;
 
     // Use this for initialization
     void Start()
@@ -24,11 +26,13 @@ public class TimeManager : MonoBehaviour
         currentTime += Time.deltaTime * timeScaler;
 
         // Hours is number of seconds divided by 3600 rounded down
-        int hours = Mathf.FloorToInt(currentTime / 3600.0f);
+        Hours = Mathf.FloorToInt(currentTime / 3600.0f);
         // Minutes is number of seconds divided by 60, rounded down, modulo 60
-        int minutes = Mathf.FloorToInt(currentTime / 60.0f) % 60;
+        Minutes = Mathf.FloorToInt(currentTime / 60.0f) % 60;
 
-        timeText.text = string.Format("{0:00}:{1:00}", hours, minutes);
+        timeText.text = string.Format("{0:00}:{1:00}", Hours, Minutes);
     }
+
+
 }
 

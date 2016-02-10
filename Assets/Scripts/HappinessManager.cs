@@ -11,6 +11,7 @@ public class HappinessManager : MonoBehaviour
 	public List<GameObject> rooms;
 	public Image happyGlyph;
 	public Slider happinessSlider;
+    public double happinessStep = 5;
 
 	// Use this for initialization
 	void Awake () 
