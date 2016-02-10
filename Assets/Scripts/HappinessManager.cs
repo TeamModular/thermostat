@@ -10,6 +10,7 @@ public class HappinessManager : MonoBehaviour
 	public double happinessValue;
 	public double happyDistance;
 	public List<GameObject> rooms;
+	public Image happyGlyph;
 	public Slider happinessSlider;
 
 	// Use this for initialization
@@ -22,8 +23,15 @@ public class HappinessManager : MonoBehaviour
 
 	void handleHappiness()
 	{
-		if (happinessValue>0 && !lightInRange())
+		if (happinessValue > 0 && !lightInRange ()) 
+		{
 			happinessValue -= 1 * Time.deltaTime;
+			happyGlyph.enabled = true;
+
+		} else 
+		{
+			happyGlyph.enabled = false;
+		}
 	}
 
 	bool lightInRange()

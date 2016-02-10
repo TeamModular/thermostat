@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class EnergyManager : MonoBehaviour 
 {
-
+	public Image energyGlyph;
 	public List<Light> lights;
 	public double energy;
 	public Slider energySlider;
@@ -22,13 +22,26 @@ public class EnergyManager : MonoBehaviour
 
 	void handleLights()
 	{
+		bool enableGlyph = false;
 		foreach (Light light in lights) 
 		{
-			if (light.enabled && energy>0) 
+			if (light.enabled && energy > 0) 
 			{
 				energy -= 1 * Time.deltaTime;
-			}
+				if (!enableGlyph) 
+				{
+					enableGlyph = true;
+				}
+			} 
 		}
+		if (enableGlyph) 
+		{
+			energyGlyph.enabled = true;
+		} else 
+		{
+			energyGlyph.enabled = false;
+		}
+
 	}
 
 	// Update is called once per frame
