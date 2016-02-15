@@ -5,7 +5,6 @@ public class WinLoseManager : MonoBehaviour {
 
     public TimeManager TimeManager;
     public HappinessManager HappinessManager;
-    public EnergyManager EnergyManager;
     public GameObject WinCanvas;
     public GameObject LossCanvas;
 	
@@ -21,8 +20,8 @@ public class WinLoseManager : MonoBehaviour {
         }
         
         // - Check loss -
-        // We want to check to see if either the happiness or energy is <= 0 and if so then you loooooseee!
-        if(EnergyManager.energy <= 0.0f || HappinessManager.happinessValue <= 0.0f)
+        // We want to check to see if happiness is <= 0 and if so then you loooooseee!
+        if(HappinessManager.happinessValue <= 0.0f)
         {
             Time.timeScale = 0.0f;
             LossCanvas.SetActive(true);

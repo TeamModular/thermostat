@@ -24,7 +24,7 @@ public class HappinessManager : MonoBehaviour
 
 	void Awake () 
 	{
-
+		
 	}
 	void Start()
 	{}
@@ -44,7 +44,7 @@ public class HappinessManager : MonoBehaviour
 		{
 			float currentTime = Time.time;
 			if (timeOfLastHappiness < currentTime && !movingRooms) {//initiate countdown
-				timeOfLastHappiness = currentTime + (float)0.5;
+				timeOfLastHappiness = currentTime + (float)1;
 				movingRooms = true;
 			} else if (happinessValue > 0 && !sadnessCooldown && currentTime>=timeOfLastHappiness && movingRooms) {
 				happinessValue -= happinessStep;

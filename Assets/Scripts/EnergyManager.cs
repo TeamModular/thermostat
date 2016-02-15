@@ -5,13 +5,17 @@ using UnityEngine.UI;
 
 public class EnergyManager : MonoBehaviour 
 {
+	public Button button;
 	public Image energyGlyph;
 	public List<Light> lights;
 	public double energy;
 	public Slider energySlider;
-
+	public double energyReductionScaling;
+	public float energyIncreaseAmount;
+	public float energyCooldown;
 	void Awake()
 	{
+		disableButton ();
 		energy = 100;
 	}
 	// Use this for initialization
@@ -27,12 +31,16 @@ public class EnergyManager : MonoBehaviour
 		{
 			if (light.enabled && energy > 0) 
 			{
-				energy -= 1 * Time.deltaTime;
+				energy -= energyReductionScaling * Time.deltaTime;
 				if (!enableGlyph) 
 				{
 					enableGlyph = true;
 				}
 			} 
+			if (energy <= 0) 
+			{
+				light.enabled = false;
+			}
 		}
 		if (enableGlyph) 
 		{
@@ -49,6 +57,28 @@ public class EnergyManager : MonoBehaviour
 	{
 		energySlider.value = (float)energy / 100;
 		handleLights ();
+	}
 
+	public void increaseEnergy()
+	{
+		if (energy < 100 - energyIncreaseAmount)
+			energy += energyIncreaseAmount;
+		else
+			energy = 100;
+	}
+
+	IEnumerator initiateEnergyCooldown(float time)
+	{
+		yield return new WaitForSeconds (time);
+
+		button.image.enabled = true;
+		button.enabled = true;
+	}
+
+	public void disableButton()
+	{
+		button.image.enabled = false;
+		button.enabled = false;
+		StartCoroutine (initiateEnergyCooldown (energyCooldown));
 	}
 }
