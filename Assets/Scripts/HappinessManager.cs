@@ -11,25 +11,56 @@ public class HappinessManager : MonoBehaviour
 	public List<GameObject> rooms;
 	public Image happyGlyph;
 	public Slider happinessSlider;
-    public double happinessStep = 5;
-
+    public double happinessStep = 30;
+	bool sadnessCooldown = false;
+	float timeOfLastHappiness = 0;
+	bool movingRooms=false;
 	// Use this for initialization
+
+	public bool getSadness()
+	{
+		return sadnessCooldown;
+	}
+
 	void Awake () 
 	{
-
+		
 	}
 	void Start()
 	{}
 
+	IEnumerator initiateSadnessCooldown(float time)
+	{
+		sadnessCooldown = true;
+		yield return new WaitForSeconds (time);
+
+		sadnessCooldown = false;
+	}
+		
+
 	void handleHappiness()
 	{
-		if (happinessValue > 0 && !lightInRange ()) 
+		if (!lightInRange ()) 
 		{
-			happinessValue -= 1 * Time.deltaTime;
-			happyGlyph.enabled = true;
-
+			float currentTime = Time.time;
+			if (timeOfLastHappiness < currentTime && !movingRooms) {//initiate countdown
+				timeOfLastHappiness = currentTime + (float)1;
+				movingRooms = true;
+			} else if (happinessValue > 0 && !sadnessCooldown && currentTime>=timeOfLastHappiness && movingRooms) {
+				happinessValue -= happinessStep;
+				happyGlyph.enabled = false;
+				StartCoroutine (initiateSadnessCooldown (2));
+			}
+			
 		} else 
 		{
+			movingRooms = false;
+			timeOfLastHappiness = 0; //reset countdown
+		}
+		if (happinessValue < 100 && !sadnessCooldown) {
+			happinessValue += Time.deltaTime;
+			happyGlyph.enabled = true;
+		} else {
 			happyGlyph.enabled = false;
 		}
 	}

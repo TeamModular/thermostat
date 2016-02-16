@@ -8,20 +8,21 @@ public class moveTo : MonoBehaviour
 	public List<GameObject> rooms;
 
 	bool waiting;
-
+	
 	NavMeshAgent agent;
 	Animation animator;
-
+	HappinessManager happinessManager;
 	void Start()
 	{
 		animator = GetComponent<Animation> ();
 		waiting = true;
 		agent = GetComponent<NavMeshAgent> ();
+		happinessManager = GetComponent<HappinessManager> ();
 	}
 
 	IEnumerator SetNewDestinationAfterWaiting(float time)
 	{
-		yield return new WaitForSeconds (2);
+		yield return new WaitForSeconds (time);
 
 		int randomRoom = Random.Range (0, rooms.Count - 1);
 
@@ -38,6 +39,12 @@ public class moveTo : MonoBehaviour
 
 	void Update () 
 	{
+		if (happinessManager.getSadness ()) 
+		{
+			waiting = true;
+			agent.velocity = Vector3.zero;
+		}
+
 		if (agent.velocity == Vector3.zero && waiting) 
 		{
 			StartCoroutine (SetNewDestinationAfterWaiting (1));
@@ -47,7 +54,7 @@ public class moveTo : MonoBehaviour
 		{
 			animator.Play ("idle",PlayMode.StopAll);
 		} else 
-		{
+		{				
 			animator.Play ("walk",PlayMode.StopAll);
 		}
 	}
