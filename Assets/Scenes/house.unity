@@ -4138,22 +4138,6 @@ Prefab:
       propertyPath: m_Name
       value: Room (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 443758, guid: 7d72860352d300142bfafdb05a6c8dd0, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.055
-      objectReference: {fileID: 0}
-    - target: {fileID: 443758, guid: 7d72860352d300142bfafdb05a6c8dd0, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.020000003
-      objectReference: {fileID: 0}
-    - target: {fileID: 443758, guid: 7d72860352d300142bfafdb05a6c8dd0, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 0.034000006
-      objectReference: {fileID: 0}
-    - target: {fileID: 2312420, guid: 7d72860352d300142bfafdb05a6c8dd0, type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 10896158, guid: 7d72860352d300142bfafdb05a6c8dd0, type: 2}
       propertyPath: m_Enabled
       value: 1
