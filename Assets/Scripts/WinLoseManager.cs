@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class WinLoseManager : MonoBehaviour {
 
     public TimeManager TimeManager;
-    public HappinessManager HappinessManager;
+    public List<HappinessManager> HappinessManagers;
     public GameObject WinCanvas;
     public GameObject LossCanvas;
 	
@@ -12,19 +13,22 @@ public class WinLoseManager : MonoBehaviour {
 	void Update () {
         // - Check win -
         // We want to check to see what time it is and if it is > 24:00 then the player has won.
-        if (TimeManager.Hours > 23)
+		if (TimeManager.Hours <= 0 && TimeManager.Minutes <= 0)
         {
             // Yay the player won!
             Time.timeScale = 0.0f;
             WinCanvas.SetActive(true);
         }
-        
+
         // - Check loss -
         // We want to check to see if happiness is <= 0 and if so then you loooooseee!
-        if(HappinessManager.happinessValue <= 0.0f)
+        foreach (HappinessManager hapManager in HappinessManagers)
         {
-            Time.timeScale = 0.0f;
-            LossCanvas.SetActive(true);
+            if (hapManager.happinessValue <= 0.0f)
+            {
+                Time.timeScale = 0.0f;
+                LossCanvas.SetActive(true);
+            }
         }
         
     }

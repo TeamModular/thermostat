@@ -11,19 +11,19 @@ public class TimeManager : MonoBehaviour
     private float currentTime;
 
     public int Hours;
-    public int Minutes;
+	public int Minutes;
 
     // Use this for initialization
     void Start()
     {
-        currentTime = 0;
+		currentTime = 86400;
     }
 
     // Update is called once per frame
     void Update()
     {
         // Errors in deltaTime will cause the ingame clock to not quite run at realtime, but we don't want it to anyway.
-        currentTime += Time.deltaTime * timeScaler;
+        currentTime -= Time.deltaTime * timeScaler;
 
         // Hours is number of seconds divided by 3600 rounded down
         Hours = Mathf.FloorToInt(currentTime / 3600.0f);
