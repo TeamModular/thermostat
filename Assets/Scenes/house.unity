@@ -840,7 +840,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeText: {fileID: 573368199}
   timeScaler: 1000
-  Hours: 0
+  Hours: 24
   Minutes: 0
 --- !u!4 &585999571
 Transform:
@@ -951,15 +951,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 443758, guid: 7d72860352d300142bfafdb05a6c8dd0, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.114999995
+      value: -0.1135
       objectReference: {fileID: 0}
     - target: {fileID: 443758, guid: 7d72860352d300142bfafdb05a6c8dd0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.069699995
+      value: 0.0685
       objectReference: {fileID: 0}
     - target: {fileID: 443758, guid: 7d72860352d300142bfafdb05a6c8dd0, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0.010000005
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 443758, guid: 7d72860352d300142bfafdb05a6c8dd0, type: 2}
       propertyPath: m_LocalRotation.x
@@ -985,9 +985,11 @@ Prefab:
       propertyPath: m_Name
       value: Room (5)
       objectReference: {fileID: 0}
+
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7d72860352d300142bfafdb05a6c8dd0, type: 2}
   m_IsPrefabParent: 0
+
 --- !u!1001 &1037060834
 Prefab:
   m_ObjectHideFlags: 0

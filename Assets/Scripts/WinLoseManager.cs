@@ -13,7 +13,7 @@ public class WinLoseManager : MonoBehaviour {
 	void Update () {
         // - Check win -
         // We want to check to see what time it is and if it is > 24:00 then the player has won.
-        if (TimeManager.Hours > 23)
+		if (TimeManager.Hours <= 0 && TimeManager.Minutes <= 0)
         {
             // Yay the player won!
             Time.timeScale = 0.0f;
