@@ -848,7 +848,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeText: {fileID: 573368199}
   timeScaler: 1000
-  Hours: 0
+  Hours: 24
   Minutes: 0
 --- !u!4 &585999571
 Transform:
@@ -959,15 +959,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 443758, guid: 7d72860352d300142bfafdb05a6c8dd0, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.114999995
+      value: -0.1135
       objectReference: {fileID: 0}
     - target: {fileID: 443758, guid: 7d72860352d300142bfafdb05a6c8dd0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.069699995
+      value: 0.0685
       objectReference: {fileID: 0}
     - target: {fileID: 443758, guid: 7d72860352d300142bfafdb05a6c8dd0, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0.010000005
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 443758, guid: 7d72860352d300142bfafdb05a6c8dd0, type: 2}
       propertyPath: m_LocalRotation.x
@@ -993,9 +993,11 @@ Prefab:
       propertyPath: m_Name
       value: Room (5)
       objectReference: {fileID: 0}
+
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7d72860352d300142bfafdb05a6c8dd0, type: 2}
   m_IsPrefabParent: 0
+
 --- !u!1001 &1037060834
 Prefab:
   m_ObjectHideFlags: 0
@@ -2247,22 +2249,6 @@ Prefab:
     - target: {fileID: 124744, guid: 7d72860352d300142bfafdb05a6c8dd0, type: 2}
       propertyPath: m_Name
       value: Room (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 443758, guid: 7d72860352d300142bfafdb05a6c8dd0, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.055
-      objectReference: {fileID: 0}
-    - target: {fileID: 443758, guid: 7d72860352d300142bfafdb05a6c8dd0, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.020000003
-      objectReference: {fileID: 0}
-    - target: {fileID: 443758, guid: 7d72860352d300142bfafdb05a6c8dd0, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 0.034000006
-      objectReference: {fileID: 0}
-    - target: {fileID: 2312420, guid: 7d72860352d300142bfafdb05a6c8dd0, type: 2}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 10896158, guid: 7d72860352d300142bfafdb05a6c8dd0, type: 2}
       propertyPath: m_Enabled
