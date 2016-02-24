@@ -628,11 +628,11 @@ Prefab:
       objectReference: {fileID: 1812226123}
     - target: {fileID: 22415148, guid: ee6dc676c4e7e554fb503ced6175ebab, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22415148, guid: ee6dc676c4e7e554fb503ced6175ebab, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ee6dc676c4e7e554fb503ced6175ebab, type: 2}
@@ -1864,11 +1864,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22464952, guid: 89a373724616ad646a87262d46b9c1f8, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22464952, guid: 89a373724616ad646a87262d46b9c1f8, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 89a373724616ad646a87262d46b9c1f8, type: 2}
@@ -2096,11 +2096,11 @@ Prefab:
       objectReference: {fileID: 1812226123}
     - target: {fileID: 22415148, guid: ee6dc676c4e7e554fb503ced6175ebab, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22415148, guid: ee6dc676c4e7e554fb503ced6175ebab, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ee6dc676c4e7e554fb503ced6175ebab, type: 2}
@@ -2134,8 +2134,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeText: {fileID: 3807496}
   timeScaler: 1000
-  Hours: 0
-  Minutes: 0
 --- !u!4 &1900332381
 Transform:
   m_ObjectHideFlags: 0

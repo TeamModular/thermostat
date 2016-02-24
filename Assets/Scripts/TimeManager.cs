@@ -10,8 +10,16 @@ public class TimeManager : MonoBehaviour
 
     private float currentTime;
 
-    public int Hours;
-	public int Minutes;
+    public int Hours
+    {
+        // Hours is number of seconds divided by 3600 rounded down
+        get { return Mathf.FloorToInt(currentTime / 3600.0f); }
+    }
+	public int Minutes
+    {
+        // Minutes is number of seconds divided by 60, rounded down, modulo 60
+        get { return Mathf.FloorToInt(currentTime / 60.0f) % 60; }
+    }
 
     // Use this for initialization
     void Start()
@@ -24,11 +32,6 @@ public class TimeManager : MonoBehaviour
     {
         // Errors in deltaTime will cause the ingame clock to not quite run at realtime, but we don't want it to anyway.
         currentTime -= Time.deltaTime * timeScaler;
-
-        // Hours is number of seconds divided by 3600 rounded down
-        Hours = Mathf.FloorToInt(currentTime / 3600.0f);
-        // Minutes is number of seconds divided by 60, rounded down, modulo 60
-        Minutes = Mathf.FloorToInt(currentTime / 60.0f) % 60;
 
         timeText.text = string.Format("{0:00}:{1:00}", Hours, Minutes);
     }
