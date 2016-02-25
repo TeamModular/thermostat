@@ -186,6 +186,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 11469506, guid: ee6dc676c4e7e554fb503ced6175ebab, type: 2}
+      propertyPath: gameCamera
+      value: 
+      objectReference: {fileID: 1389748692}
     - target: {fileID: 11496804, guid: ee6dc676c4e7e554fb503ced6175ebab, type: 2}
       propertyPath: rooms.Array.data[0]
       value: 
@@ -344,6 +348,10 @@ Prefab:
       propertyPath: m_Name
       value: MAX (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 11469506, guid: ee6dc676c4e7e554fb503ced6175ebab, type: 2}
+      propertyPath: gameCamera
+      value: 
+      objectReference: {fileID: 1389748692}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ee6dc676c4e7e554fb503ced6175ebab, type: 2}
   m_IsPrefabParent: 0
