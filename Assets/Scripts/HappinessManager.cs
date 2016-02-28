@@ -11,7 +11,7 @@ public class HappinessManager : MonoBehaviour
 	public List<GameObject> rooms;
 	public Image happyGlyph;
 	public Slider happinessSlider;
-    public double happinessStep = 30;
+        double happinessStep = 25;
 	bool sadnessCooldown = false;
 	float timeOfLastHappiness = 0;
 	bool movingRooms=false;
@@ -58,7 +58,7 @@ public class HappinessManager : MonoBehaviour
 			timeOfLastHappiness = 0; //reset countdown
 		}
 		if (happinessValue < 100 && !sadnessCooldown) {
-			happinessValue += Time.deltaTime;
+			happinessValue += 2*Time.deltaTime;
 			happyGlyph.enabled = true;
 		} else {
 			happyGlyph.enabled = false;

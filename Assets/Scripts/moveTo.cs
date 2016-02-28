@@ -47,7 +47,7 @@ public class moveTo : MonoBehaviour
 
 		if (agent.velocity == Vector3.zero && waiting) 
 		{
-			StartCoroutine (SetNewDestinationAfterWaiting (1));
+			StartCoroutine (SetNewDestinationAfterWaiting ((float)1.5));
 			waiting = false;
 		}
 		if (agent.velocity == Vector3.zero) 
