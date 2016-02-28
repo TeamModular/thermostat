@@ -11,6 +11,7 @@ public class HappinessManager : MonoBehaviour
 	public List<GameObject> rooms;
 	public Image happyGlyph;
 	public Slider happinessSlider;
+	public AudioSource audio;
         double happinessStep = 25;
 	bool sadnessCooldown = false;
 	float timeOfLastHappiness = 0;
@@ -50,6 +51,7 @@ public class HappinessManager : MonoBehaviour
 				happinessValue -= happinessStep;
 				happyGlyph.enabled = false;
 				StartCoroutine (initiateSadnessCooldown (2));
+				audio.Play();
 			}
 			
 		} else 

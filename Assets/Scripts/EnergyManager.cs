@@ -73,6 +73,8 @@ public class EnergyManager : MonoBehaviour
 
 		button.image.enabled = true;
 		button.enabled = true;
+		AudioSource audio = button.GetComponent<AudioSource>();
+		audio.Play();
 	}
 
 	public void disableButton()
