@@ -29,8 +29,11 @@ public class LightController : MonoBehaviour
 
 	public void OnMouseDown()
 	{
-		Toggle ();
-		lightToggle.Play ();
+        if (!GameManager.Instance.Paused)
+        {
+            Toggle();
+            lightToggle.Play();
+        }
 	}
 
 	private void Toggle() 

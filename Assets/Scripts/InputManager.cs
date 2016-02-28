@@ -5,13 +5,17 @@ public class InputManager : MonoBehaviour {
 
     public GameObject PauseCanvas;
 
+    public void SetPauseMenuActive(bool active)
+    {
+        GameManager.Instance.SetPause(active);
+        PauseCanvas.SetActive(active);
+    }
+
     // Update is called once per frame
     void Update() {
         if (Input.GetKeyDown("escape"))
         {
-            GameManager.Instance.SetPause(!GameManager.Instance.Paused);
-            PauseCanvas.SetActive(GameManager.Instance.Paused);
+            SetPauseMenuActive(!GameManager.Instance.Paused);
         }
-
 	}
 }
