@@ -8,6 +8,7 @@ public class WinLoseManager : MonoBehaviour {
     public List<HappinessManager> HappinessManagers;
     public GameObject WinCanvas;
     public GameObject LossCanvas;
+    public string levelname;
 	
 	// Update is called once per frame
 	void Update () {
@@ -18,6 +19,7 @@ public class WinLoseManager : MonoBehaviour {
             // Yay the player won!
             Time.timeScale = 0.0f;
             WinCanvas.SetActive(true);
+	    PlayerPrefs.SetInt(levelname,1);
         }
 
         // - Check loss -

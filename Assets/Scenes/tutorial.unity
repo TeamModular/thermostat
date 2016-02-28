@@ -900,6 +900,10 @@ Prefab:
       propertyPath: HappinessManagers.Array.data[0]
       value: 
       objectReference: {fileID: 766629668}
+    - target: {fileID: 11424802, guid: dc9b36323cc664a148dadca7b7d13a86, type: 2}
+      propertyPath: levelname
+      value: level1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dc9b36323cc664a148dadca7b7d13a86, type: 2}
   m_IsPrefabParent: 0
