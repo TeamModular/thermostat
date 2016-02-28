@@ -25,7 +25,7 @@ public class WinLoseManager : MonoBehaviour {
         {
             totalHappinessLeft += hapManager.happinessValue;
         }
-        RemainingHappinessText.text = totalHappinessLeft > 0 ? totalHappinessLeft.ToString() : "0";
+        RemainingHappinessText.text = totalHappinessLeft > 0 ? ((int)totalHappinessLeft).ToString() : "0";
 
     }
 
