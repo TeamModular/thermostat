@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class InputManager : MonoBehaviour {
+public class PauseManager : MonoBehaviour {
 
     public GameObject PauseCanvas;
 
