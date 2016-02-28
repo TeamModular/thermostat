@@ -156,6 +156,10 @@ Prefab:
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11466782, guid: 7d72860352d300142bfafdb05a6c8dd0, type: 2}
+      propertyPath: scale
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7d72860352d300142bfafdb05a6c8dd0, type: 2}
   m_IsPrefabParent: 0
@@ -250,6 +254,10 @@ Prefab:
       propertyPath: m_Radius
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 11469506, guid: ee6dc676c4e7e554fb503ced6175ebab, type: 2}
+      propertyPath: gameCamera
+      value: 
+      objectReference: {fileID: 1856813366}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ee6dc676c4e7e554fb503ced6175ebab, type: 2}
   m_IsPrefabParent: 0
@@ -495,6 +503,10 @@ Prefab:
     - target: {fileID: 124744, guid: 7d72860352d300142bfafdb05a6c8dd0, type: 2}
       propertyPath: m_StaticEditorFlags
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 11466782, guid: 7d72860352d300142bfafdb05a6c8dd0, type: 2}
+      propertyPath: scale
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7d72860352d300142bfafdb05a6c8dd0, type: 2}
@@ -1536,6 +1548,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11466782, guid: 7d72860352d300142bfafdb05a6c8dd0, type: 2}
+      propertyPath: scale
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7d72860352d300142bfafdb05a6c8dd0, type: 2}
   m_IsPrefabParent: 0
@@ -2559,6 +2575,10 @@ Prefab:
     - target: {fileID: 474334, guid: 7d72860352d300142bfafdb05a6c8dd0, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11466782, guid: 7d72860352d300142bfafdb05a6c8dd0, type: 2}
+      propertyPath: scale
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7d72860352d300142bfafdb05a6c8dd0, type: 2}

@@ -6,12 +6,15 @@ public class LightController : MonoBehaviour
 	Light source;
 	AudioSource lightToggle;
 	// Use this for initialization
-
+	public float scale;
 	void Awake()
 	{
 		source  = GetComponentInChildren<Light>();
+		
+		float mag = transform.localScale.magnitude;
 
-		Vector3 newScale = new Vector3(transform.localScale.y, transform.localScale.x, transform.localScale.z);
+		
+		Vector3 newScale = new Vector3(scale*transform.localScale.y / mag, scale*transform.localScale.x / mag, scale*transform.localScale.z / mag);
 		source.transform.localScale = newScale;
 
 	}
