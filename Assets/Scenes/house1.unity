@@ -209,7 +209,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 443758, guid: 7d72860352d300142bfafdb05a6c8dd0, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.792
+      value: 0.775
       objectReference: {fileID: 0}
     - target: {fileID: 443758, guid: 7d72860352d300142bfafdb05a6c8dd0, type: 2}
       propertyPath: m_LocalPosition.y
@@ -217,7 +217,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 443758, guid: 7d72860352d300142bfafdb05a6c8dd0, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0.046414
+      value: 0.046
       objectReference: {fileID: 0}
     - target: {fileID: 443758, guid: 7d72860352d300142bfafdb05a6c8dd0, type: 2}
       propertyPath: m_LocalRotation.x
@@ -245,11 +245,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 443758, guid: 7d72860352d300142bfafdb05a6c8dd0, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.517672
+      value: 0.6997019
       objectReference: {fileID: 0}
     - target: {fileID: 443758, guid: 7d72860352d300142bfafdb05a6c8dd0, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.4044808
+      value: 0.52572274
       objectReference: {fileID: 0}
     - target: {fileID: 443758, guid: 7d72860352d300142bfafdb05a6c8dd0, type: 2}
       propertyPath: m_LocalScale.z
@@ -630,11 +630,11 @@ Prefab:
       objectReference: {fileID: 1812226123}
     - target: {fileID: 22415148, guid: ee6dc676c4e7e554fb503ced6175ebab, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22415148, guid: ee6dc676c4e7e554fb503ced6175ebab, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11469506, guid: ee6dc676c4e7e554fb503ced6175ebab, type: 2}
       propertyPath: gameCamera
@@ -1021,7 +1021,7 @@ Transform:
   - {fileID: 853725858}
   - {fileID: 2017269074}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
 --- !u!1 &586865143
 GameObject:
   m_ObjectHideFlags: 0
@@ -2314,11 +2314,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22464952, guid: 89a373724616ad646a87262d46b9c1f8, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22464952, guid: 89a373724616ad646a87262d46b9c1f8, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 89a373724616ad646a87262d46b9c1f8, type: 2}
@@ -2588,11 +2588,11 @@ Prefab:
       objectReference: {fileID: 1812226123}
     - target: {fileID: 22415148, guid: ee6dc676c4e7e554fb503ced6175ebab, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22415148, guid: ee6dc676c4e7e554fb503ced6175ebab, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11469506, guid: ee6dc676c4e7e554fb503ced6175ebab, type: 2}
       propertyPath: gameCamera
@@ -2822,7 +2822,7 @@ MonoBehaviour:
   energy: 100
   energySlider: {fileID: 591084042}
   energyReductionScaling: 3
-  energyIncreaseAmount: 15
+  energyIncreaseAmount: 30
   energyCooldown: 5
 --- !u!4 &1938441943
 Transform:
@@ -3094,7 +3094,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 443758, guid: 7d72860352d300142bfafdb05a6c8dd0, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0.17918
+      value: 0.162
       objectReference: {fileID: 0}
     - target: {fileID: 443758, guid: 7d72860352d300142bfafdb05a6c8dd0, type: 2}
       propertyPath: m_LocalRotation.x
@@ -3122,7 +3122,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 443758, guid: 7d72860352d300142bfafdb05a6c8dd0, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.4642444
+      value: 0.5051755
       objectReference: {fileID: 0}
     - target: {fileID: 443758, guid: 7d72860352d300142bfafdb05a6c8dd0, type: 2}
       propertyPath: m_LocalScale.y
