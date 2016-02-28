@@ -1387,6 +1387,48 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
+--- !u!1001 &1420246880
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 498952, guid: 82fa9d39516ed6744b04664f5060faa3, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 498952, guid: 82fa9d39516ed6744b04664f5060faa3, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 498952, guid: 82fa9d39516ed6744b04664f5060faa3, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 498952, guid: 82fa9d39516ed6744b04664f5060faa3, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 498952, guid: 82fa9d39516ed6744b04664f5060faa3, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 498952, guid: 82fa9d39516ed6744b04664f5060faa3, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 498952, guid: 82fa9d39516ed6744b04664f5060faa3, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 498952, guid: 82fa9d39516ed6744b04664f5060faa3, type: 2}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 82fa9d39516ed6744b04664f5060faa3, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1422818588
 GameObject:
   m_ObjectHideFlags: 0
@@ -2004,6 +2046,14 @@ Prefab:
       propertyPath: gameCamera
       value: 
       objectReference: {fileID: 1558805272}
+    - target: {fileID: 22415148, guid: ee6dc676c4e7e554fb503ced6175ebab, type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22415148, guid: ee6dc676c4e7e554fb503ced6175ebab, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ee6dc676c4e7e554fb503ced6175ebab, type: 2}
   m_IsPrefabParent: 0
@@ -2106,6 +2156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeText: {fileID: 3807496}
   timeScaler: 1000
+  currentTime: 86400
 --- !u!4 &1900332381
 Transform:
   m_ObjectHideFlags: 0

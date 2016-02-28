@@ -6,6 +6,7 @@ public class TutorialManager : MonoBehaviour {
     public GameObject mainCamera;
     public GameObject maxCamera;
     public GameObject mainCanvas;
+    public GameObject pauseManager;
 
 	// Use this for initialization
 	void Start () {
@@ -21,6 +22,7 @@ public class TutorialManager : MonoBehaviour {
 
     public void BeginGame()
     {
+        pauseManager.SetActive(true);
         GameManager.Instance.SetPause(false);
     }
 
