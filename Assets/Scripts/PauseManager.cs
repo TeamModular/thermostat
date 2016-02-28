@@ -5,6 +5,11 @@ public class PauseManager : MonoBehaviour {
 
     public GameObject PauseCanvas;
 
+    public void GoToMainMenu()
+    {
+        GameManager.Instance.GoToMainMenu();
+    }
+
     public void SetPauseMenuActive(bool active)
     {
         GameManager.Instance.SetPause(active);
