@@ -1,0 +1,8 @@
+{
+	"max": "This is Max. Max is afraid of the dark. If he stays in a dark room for too long, then he will become unhappy and freeze where he is. To make him happy again, turn on the light! If his happiness hits zero, you lose.",
+	"happinessMeter":"This is Max's happiness. If it empties, you lose."
+	"time": "This is the remaining time until the game ends. If it hits zero, you win!",
+	"room":"Click on a room to illuminate it.",
+	"energy": "Keeping rooms lit will drain energy. If the energy runs out then all the lights turn off and you will need to get more energy to keep Max happy.",
+	"energyButton":"Click these when they appear to increase energy levels."
+}
