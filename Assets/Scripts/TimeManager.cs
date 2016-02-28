@@ -8,7 +8,7 @@ public class TimeManager : MonoBehaviour
     public Text timeText;
     public float timeScaler = 1;
 
-    private float currentTime;
+    public float currentTime = 86400;
 
     public int Hours
     {
@@ -24,7 +24,7 @@ public class TimeManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-		currentTime = 86400;
+        // currentTime = 86400;
     }
 
     // Update is called once per frame
