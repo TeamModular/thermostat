@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class WinLoseManager : MonoBehaviour {
 
@@ -8,8 +9,26 @@ public class WinLoseManager : MonoBehaviour {
     public List<HappinessManager> HappinessManagers;
     public GameObject WinCanvas;
     public GameObject LossCanvas;
+    public GameObject ScoreBreakdownCanvas;
+    public EnergyManager energyManager;
+    public Text RemainingHappinessText;
+    public Text RemainingEnergyText;
     public string levelname;
 	
+    void DisplayScoreBreakdown()
+    {
+        ScoreBreakdownCanvas.SetActive(true);
+        RemainingEnergyText.text = ((int)energyManager.energy).ToString();
+
+        double totalHappinessLeft = 0.0;
+        foreach (HappinessManager hapManager in HappinessManagers)
+        {
+            totalHappinessLeft += hapManager.happinessValue;
+        }
+        RemainingHappinessText.text = totalHappinessLeft > 0 ? totalHappinessLeft.ToString() : "0";
+
+    }
+
 	// Update is called once per frame
 	void Update () {
         // - Check win -
@@ -19,7 +38,8 @@ public class WinLoseManager : MonoBehaviour {
             // Yay the player won!
             Time.timeScale = 0.0f;
             WinCanvas.SetActive(true);
-	    PlayerPrefs.SetInt(levelname,1);
+            DisplayScoreBreakdown();
+	        PlayerPrefs.SetInt(levelname,1);
         }
 
         // - Check loss -
@@ -30,6 +50,7 @@ public class WinLoseManager : MonoBehaviour {
             {
                 Time.timeScale = 0.0f;
                 LossCanvas.SetActive(true);
+                DisplayScoreBreakdown();
             }
         }
         
