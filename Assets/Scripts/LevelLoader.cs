@@ -6,6 +6,7 @@ public class LevelLoader : MonoBehaviour {
 
 	public void LoadLevel(int index)
     {
+        GameManager.Instance.SetPause(false);
         SceneManager.LoadScene(index);
     }
 
